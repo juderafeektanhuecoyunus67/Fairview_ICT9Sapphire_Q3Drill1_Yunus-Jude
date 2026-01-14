@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 Drill 1</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calc-container {
+            background-color: #000; /* Black background from sample */
+            border: 2px dashed red;  /* Red dashed border from sample */
+            border-radius: 20px;
+            padding: 40px;
+            width: 3660px;
+            text-align: center;
+            color: white;
+        }
+        .header-outline {
+            border: 1px dashed red;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #result {
+            color: #ffff00; /* Yellow text for 100 */
+            font-size: 2.8rem;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .btn-display {
+            background-color: #e94560; /* Reddish button color */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 8px 30px;
+            font-weight: 500;
+        }
+        .btn-display:hover {
+            background-color: #cf3a52;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calc-container">
+        <div class="header-outline">
+            <h1 id="head1" class="text-light"></h1>
+        </div>
+
+        <p style="font-family: 'Courier New', Courier, monospace;">Click the button to display the area of the triangle.</p>
+
+        <button type="button" class="btn-display" onclick="calculateArea()">Display</button>
+
+        <div id="result">---</div>
+    </div>
+
+    <script>
+        // Requirement: JavaScript comments to explain logical procedure
+        
+        // 1. Assigning the title to the heading element
+        var h = "Basic Calculator";
+        document.getElementById('head1').innerHTML = h;
+       
+        var base = 50;
+        var height = 4.0;
+        
+        // VALID VARIABLE NAME WITH UNDERSCORE
+        var triangle_area = (base * height) / 2;
+
+        // 3. Function to update the page with the calculated area
+        function calculateArea() {
+            // Using innerHTML to update the result on the page
+            document.getElementById('result').innerHTML = triangle_area;
+        }
+    </script>
+
+</body>
+</html>
